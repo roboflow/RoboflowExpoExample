@@ -1,5 +1,17 @@
 # Getting Started with Roboflow in Expo
 
+## Running the Example
+
+Make sure Expo[https://expo.dev] and CocoaPods[https://cocoapods.org] are installed.
+
+1. Clone the project.
+2. Open the project and run `expo install`
+3. Open the iOS directory in the project and run `pod install`
+4. Open `RoboflowExpoExample.xcworkspace` in Xcode
+5. Click on the project name on the left, then Signing and Capabilites, then select your team.
+6. Open `RoboflowFrameProcessorPlugin.swift` in XCode and add your apiKey, model name, and model version from Roboflow[https://roboflow.com]
+7. Run the app on a device using XCode
+
 ## Expo Project Setup
 
 ### Init Expo Project
