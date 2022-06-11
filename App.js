@@ -28,15 +28,15 @@ export default function App() {
     "worklet";
     const [detections, width, height] = roboflowDetect(frame);
     for (let i = 0; i < detections.length; i++) {
-      var b = detections[i].bbox;
-      b[0] = b[0] * (windowWidth / width);
-      b[1] = b[1] * (windowHeight / height);
-      b[2] = b[2] * (windowWidth / width);
-      b[3] = b[3] * (windowHeight / height);
-      detections[i].bbox = b;
+      var b = detections[i];
+      b.x = b.x * (windowWidth / width);
+      b.y = b.y * (windowHeight / height);
+      b.width = b.width * (windowWidth / width);
+      b.height = b.height * (windowHeight / height);
+      detections[i] = b;
     }
     runOnJS(updateBboxes)(detections);
-    console.log(`Detections in Frame: ${detections.length}`);
+    console.log(`Detections in Frame: ${JSON.stringify(detections)}`);
   }, []);
 
   if (device == null) return <Text>Hello World</Text>;
@@ -66,10 +66,10 @@ export default function App() {
                 borderColor: `rgb(${box.color[0]},${box.color[1]},${box.color[2]})`,
                 borderWidth: 2,
                 borderStyle: "solid",
-                width: box.bbox[2] - box.bbox[0],
-                height: box.bbox[3] - box.bbox[1],
-                left: box.bbox[0],
-                top: box.bbox[1],
+                width: box.width,
+                height: box.height,
+                left: box.x - box.width / 2,
+                top: box.y - box.height / 2,
                 backgroundColor: "rgba(255, 255, 255, 0)",
                 position: "absolute",
                 zIndex: 10,
@@ -80,7 +80,7 @@ export default function App() {
                   color: `rgb(${box.color[0]},${box.color[1]},${box.color[2]})`,
                 }}
               >
-                {box.label} {Math.round(box.confidence * 100) / 100}
+                {box.class} {Math.round(box.confidence * 100) / 100}
               </Text>
             </View>
           ))}

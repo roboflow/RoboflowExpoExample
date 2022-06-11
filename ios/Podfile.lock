@@ -315,7 +315,7 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - Roboflow (0.0.8)
+  - Roboflow (0.0.10)
   - VisionCamera (2.13.2):
     - React
     - React-callinvoker
@@ -454,7 +454,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Roboflow:
-    :commit: 022ac2de2ffe12d0e5566ab1a17b874be733cc25
+    :commit: 0b74324d4f897235dbcc3711bf93dba50f781ab5
     :git: https://github.com/roboflow-ai/roboflow-ios-podspecs
 
 SPEC CHECKSUMS:
@@ -496,7 +496,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 493d9abb8b23c3f84e19ae221eeba92cadcb70dc
   ReactCommon: 8fea6422328e2fc093e25c9fac67adbcf0f04fb4
   RNReanimated: 0e5ef4a7e4e79f84efbe5b40771c31044c51e7d0
-  Roboflow: eaf195f726c670569a1711066f866ce48234bf91
+  Roboflow: 7c77197347307deb252f9986574833c4dec912b6
   VisionCamera: 58b4b21d128b474f14b11e4fe11691696e6059bf
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
 
