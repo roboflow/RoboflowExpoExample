@@ -11,7 +11,7 @@ import CoreImage
 @objc(RoboflowFrameProcessorPlugin)
 public class RoboflowFrameProcessorPlugin: NSObject, FrameProcessorPluginBase {
   
-  static let rf = RoboflowMobile(apiKey: "XLQnzSRWBvkmNGPpFMrd")
+  static let rf = RoboflowMobile(apiKey: "YOUR API KEY")
   static private var model: RFObjectDetectionModel?
   static private var loading = false
   static private var predictionsBuffer = [[RFObjectDetectionPrediction]]()
