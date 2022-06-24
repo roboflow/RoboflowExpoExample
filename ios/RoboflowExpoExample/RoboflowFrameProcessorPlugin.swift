@@ -56,7 +56,7 @@ public class RoboflowFrameProcessorPlugin: NSObject, FrameProcessorPluginBase {
       }
         //return predictions
     } else if (!loading) {
-      loadRoboflowModelWith(model: "american-sign-language-letters-hpwrr", version: 7/*insert your model version here*/, threshold: 0.5, overlap: 0.5, maxObjects: 20.0)
+      loadRoboflowModelWith(model: "american-sign-language-letters-hpwrr", version: 7/*insert your model version here*/, threshold: 0.1, overlap: 0.5, maxObjects: 20.0)
     }
     
     if predictionsBuffer.count > 0 {
